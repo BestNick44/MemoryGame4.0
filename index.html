@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<div class="container">
+  <h1>Memory Game</h1>
+  <div class="button-group">
+    <button id="start-level1" type="button">Level 1</button>
+    <button id="start-level2" type="button">Level 2</button>
+    <button type="button" id="reset" class="disabled">Reset</button>
+  </div>
+
+  <div id="screens">
+    <div id="instructions-screen" class="screen active">
+      <div class="instructions">
+        <h2>Instructions:</h2>
+        <p>Your goal is to find all the matching pairs of cards.</p>
+        <ul>
+          <li>Click on a card to flip it over and reveal its color.</li>
+          <li>Try to remember the colors and their positions.</li>
+          <li>Click on another card to flip it over.</li>
+          <li>If the two flipped cards have the same color, they will be slightly dimmed but stay visible, and you've found a match!</li>
+          <li>If the two flipped cards have different colors, they will be flipped back over.</li>
+          <li>Keep flipping cards and making guesses until you find all the matches.</li>
+          <li>Try to complete the game with the fewest number of guesses.</li>
+          <li>Click the "Level 1" button to begin the Level 1 game.</li>
+          <li>Click the "Level 2" button to begin the Level 2 game.</li>
+          <li>Click the "Reset" button to reset your scores.</li>
+        </ul>
+        <p>Have fun and enjoy the Memory Game!</p>
+      </div>
+    </div>
+
+    <div id="game-screen" class="screen">
+      <div id="game"></div>
+      <div class="control">
+        <div>
+          Current Guesses: <span id="current">0</span>
+        </div>
+        <div>
+          Lowest Guesses (Level 1): <span id="lowest-level1">0</span>
+        </div>
+        <div>
+          Lowest Guesses (Level 2): <span id="lowest-level2">0</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+<script src="script.js"></script>
+
+</body>
+</html>
